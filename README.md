@@ -1,4 +1,4 @@
-# react_notification library. 
+# table grid react library. 
   A simple configurable table grid react library along with sorting, filtering/search, paginated and row selection functionality enabled.
 
 # Installing

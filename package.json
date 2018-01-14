@@ -1,6 +1,6 @@
 {
   "name": "table_grid_react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple configurable table grid react library along with sorting, filtering/search, paginated and row selection functionality enabled.",
   "main": "build/index.js",
   "scripts": {
