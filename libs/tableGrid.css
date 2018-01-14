@@ -1,0 +1,54 @@
+.headContainer, .bodyContainer {
+  width: 100%;
+  border-spacing: inherit;
+}
+.columns {
+  background-color: hsl(0, 0%, 21%);
+}
+.columns tr .column {
+  padding: 5px;
+  text-align: justify;
+  color: #FFFFFF;
+  border-bottom: 1px solid hsl(0, 0%, 21%);
+  font-size: 14px;
+}
+
+.bodyContainer tr {
+  text-align: justify;
+}
+.bodyContainer tr td {
+  padding: 5px;
+  border-bottom: 1px solid hsla(0, 0%, 21%, 0.164);
+}
+
+.bodyContainer tr:hover {
+  background-color: hsla(204, 86%, 53%, 0.45);
+}
+.highlight {
+  background-color: 'hsl(204, 86%, 53%)';
+}
+
+.footerContainer .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.footerContainer .pagination p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex-direction: row-reverse;
+}
+.filterContainer .searchBox {
+  margin: 10px;
+  margin: 10px;
+  height: 15px;
+  padding: 5px;
+}
