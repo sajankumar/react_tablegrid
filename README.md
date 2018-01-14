@@ -1,37 +1,41 @@
 # react_notification library. 
-It is just a simple notification library which allows you to notify your users. 
-
-# Prerequisites
-  Depends on font-awesome icons, you can add this below line of your code on your index.html file or you can install from npm package npm install font-awesome
-  ```<link rel="stylesheet"    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">```
-
+  A simple configurable table grid react library along with sorting, filtering/search, paginated and row selection functionality enabled.
 
 # Installing
-  ```npm install react_nofitication```
+  ```npm install table_grid_react```
 
 # usage
- ``` //define your config objects
+  ```//define your config objects
     this.config = {
-        type: 'danger',
-        icon: 'fa-exclamation-circle',
-        message: `I am a danger notification!.`,
-        isAutoClose: false //by default. If you set it true notification will close after 3 seconds.
-      };
-
-  //pass it to the component    
-  <Notification config={this.config} /> ```
-
- ``` // you can handle some logic when you close your notification.
-    close(event) {
-      console.log('event', event);
-      //your logic..
+      data: [{name: 'test', 'age': 30, 'email': 'test@123.com', 'country': 'india'},{name: 'test2', 'age': 10, 'email': 'ab@123.com', 'country': 'russia'}],
+      isSorting: true, //enable or disable sorting
+      isRowSelection: false, //enable or disable row selection
+      isSearch: true, //enable or disable search
+      filterBy: 'name', // define a key for searc e.g 'name/age/email' etc.
+      onRowSelect: (item) => { console.log('selected row data', item); } // this will invoke only if you enable isRowSelection = true.
+    };
+ ```
+ ```render(){
+        return(
+        //pass it to the component
+        <div className="container">
+          <TableGrid tableConfig={this.config}/>
+        </div>
+      );
     }
-    render(){
-      return(
-          <Notification config={this.config} onCloseHandler={this.close.bind(this)}/>
-    );
-  }
-  ```
+ ```
+# Todo
+    *server side pagination
+    *designing table
+    *drag and drop re-order
+
+# Contribution
+  I am welcoming everyone whosoever interested to build this simple tableGrid into super tableGrid. Please fork this repo and implement your changes, submit pull request.
+
+# Development
+  ```sudo npm install -g create-react-app newApp```
+  copy the libs folder from this repo and make your changes to and push it. 
+
 # License
   ISC
 
