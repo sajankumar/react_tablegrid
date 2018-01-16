@@ -63,17 +63,19 @@ export default class TableFooter extends React.Component {
   }
   render() {
     return(
-    <div className="pagination">
-      <div>
-        <button onClick={this.next}
-                disabled={this.state.nextBtnState}>Next</button>
-      </div>
+    <nav className="pagination" aria-label="pagination">
+      <button onClick={this.previous}
+              disabled={this.state.prvBtnState}
+              className="pagination-previous">
+            Previous
+      </button>
       <p>{this.state.pagesInfo}</p>
-      <div>  
-        <button onClick={this.previous}
-                disabled={this.state.prvBtnState}>Previous</button>
-      </div>  
-    </div>
+      <button onClick={this.next}
+              disabled={this.state.nextBtnState}
+              className="pagination-next">
+              Next
+      </button>
+    </nav>
     )
   }
 }

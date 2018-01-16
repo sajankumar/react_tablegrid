@@ -24,11 +24,11 @@ export default class TableHeader extends React.Component {
     const headers = this.state.headers;
     const sorting = this.props.isSorting ? this.showSorting() : null;
     const element = headers.map((value, index) => {  
-      return headers.length !== 0 ? (<th className="column"
+      return headers.length !== 0 ? (<th
                   key={`headers_${index}`}
                   onClick={(evt) => this.props.onSortHandler(evt, index)}> {value}
                 {sorting}
-            </th>) : (<th className="column">No data found!</th>)
+            </th>) : (<th>No data found!</th>)
     });
     return <tr>{element}</tr>;
   }

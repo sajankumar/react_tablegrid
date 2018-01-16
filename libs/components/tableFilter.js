@@ -14,12 +14,16 @@ export default class TableFilter extends React.Component {
 
   search() {
     return (
-      <div className="filterContainer">
-        <input type="text"
-              placeholder={this.props.placeholder || 'Search...'}
-              onChange={(evt) => {evt.persist(); this.props.changeEvent(evt)}}
-              className="searchBox"
-        />
+      <div className="field">
+        <div className="control has-icons-left has-icons-right">
+          <input type="text"
+                  placeholder={this.props.placeholder || 'Search...'}
+                  onChange={(evt) => {evt.persist(); this.props.changeEvent(evt)}}
+                  className="input"/>
+          <span className="icon is-small is-right">
+            <i className="fa fa-search"></i>
+          </span>
+        </div>
       </div>
     );
   }

@@ -33,10 +33,16 @@ export default class TableBody extends React.Component {
       return;
     }
     ev.persist();
-    this.reset();
-    item.selectedRow = true
+    if(item.selectedRow) {
+      this.reset();  
+    }else {
+      this.reset();
+      item.selectedRow = true
+      this.props.onRowSelect(item);
+    }
+    
     this.setState({data: this.props.data});
-    this.props.onRowSelect(item);
+    
   }
   render() {
     const datas = this.state.data;
@@ -48,7 +54,7 @@ export default class TableBody extends React.Component {
     let element = datas.map((item, index) => {
       return(
         <tr key={index} onClick={(evt) => this.onRowHandler(evt, item)}
-            style={this.state.data[index].selectedRow ? this.styles : null}>
+            className={this.state.data[index].selectedRow ? 'is-selected' : null}>
          {keys.map((key, i) => {
            const td = (
            <td key={key + i}>{item[key]}</td>);

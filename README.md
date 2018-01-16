@@ -25,9 +25,9 @@
     }
  ```
 # Todo
-    *server side pagination
-    *designing table
-    *drag and drop re-order
+    * Server side pagination
+    * Drag and drop re-order
+    * Tree views 
 
 # Contribution
   I am welcoming everyone whosoever interested to build this simple tableGrid into super tableGrid. Please fork this repo and implement your changes, submit pull request.

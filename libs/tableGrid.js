@@ -3,6 +3,7 @@ import TableHeader from './components/tableHeader';
 import TableBody from './components/tableBody';
 import TableFooter from './components/tableFooter';
 import TableFilter from './components/tableFilter';
+import '../node_modules/bulma/css/bulma.css';
 import '../node_modules/font-awesome/css/font-awesome.css';
 import './tableGrid.css';
 var lodash = require('lodash');
@@ -102,11 +103,11 @@ export default class TableGrid extends React.Component {
       <section className="tableContainer">
         {!this.state.showTable ? this.showTableMsg() : null}
         <TableFilter changeEvent={this.onSearch} isSearch={this.tableConfig.isSearch} />
-        <table className="headContainer">
-          <thead className="columns">
+        <table className="table is-striped is-hoverable is-fullwidth">
+          <thead>
             {this.state.showTable ? this.showTableHeader(): null}
           </thead>  
-          <tbody className="bodyContainer">
+          <tbody>
               {this.showTableBody()}
           </tbody>
         </table>
